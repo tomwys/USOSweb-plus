@@ -1,0 +1,11 @@
+{
+"content_scripts": [
+  {
+  "js": [ "jquery.min.js", "script.js" ],
+  "matches": [ "https://usosweb.mimuw.edu.pl/*" ]
+  }
+],
+"description": "Dodatek modyfikujący działanie usosweba.",
+"name": "Usosweb ++",
+"version": "0.1.0"
+}
