@@ -1,11 +1,15 @@
 {
 "content_scripts": [
   {
-  "js": [ "jquery.min.js", "script.js" ],
+  "js": [ "jquery.min.js", "base.js", "mimuw.js" ],
   "matches": [ "https://usosweb.mimuw.edu.pl/*" ]
+  },
+  {
+  "js": [ "jquery.min.js", "base.js" ],
+  "matches": [ "https://usosweb.wne.uw.edu.pl/*" ]
   }
 ],
 "description": "Dodatek modyfikujący działanie usosweba.",
 "name": "USOSweb ++",
-"version": "0.1.0"
+"version": "0.1.1"
 }
