@@ -6,7 +6,15 @@ function enableStudentPhotos() {
     if(match) {
       var id = match[1];
       var row = rows[i].parentNode.parentNode;
-      $(row.childNodes[row.childNodes.length - 2]).append('<img style="height: 40px;" src="/kontroler.php?_action=actionx:dodatki/zdj_do_legitymacji/pokazZdjecie(os_id:'+id+')" />');
+      $(row.childNodes[row.childNodes.length - 2]).append('<img id="stud'+id+'" style="height: 40px;" />');
+      var remover = function(id) {
+        func = function() {
+          $('#stud'+id).remove();
+        }
+        return func;
+      }			
+      $('#stud'+id).error(remover(id));
+      $('#stud'+id).attr("src",'/kontroler.php?_action=actionx:dodatki/zdj_do_legitymacji/pokazZdjecie(os_id:'+id+')');
     }
   }
 }
