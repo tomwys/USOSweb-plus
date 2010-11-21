@@ -6,7 +6,11 @@ function enableStudentPhotos() {
     if(match) {
       var id = match[1];
       var row = rows[i].parentNode.parentNode;
-      $(row.childNodes[row.childNodes.length - 2]).append('<img id="stud'+id+'" style="height: 40px;" />');
+      $(row.childNodes[row.childNodes.length - 2]).append(
+        '<a href="/kontroler.php?_action=actionx:katalog2/osoby/pokazOsobe(os_id:'+id+')">'+
+          '<img id="stud'+id+'" style="height: 40px;" />'+
+        '</a>'
+      );
       var remover = function(id) {
         func = function() {
           $('#stud'+id).remove();
