@@ -59,16 +59,17 @@ $(function(){
         $(link).after(' <span class="note">' + wynik + ' pkt</span> ');
         var data;
 
-        if (!(data = $.localStorage.getItem(id))){
+        if (!(data = localStorage[id])){
           data = [0, 0];
         }else{
+          data = JSON.parse(data);
           data = [parseFloat(data[0]), parseInt([data[1]])];
         }
         if (data[0] != wynik || data[1] != nullCount){
           var dif = wynik - data[0];
           $(link).next().append(' (' + ((dif >= 0)?'+':'') + dif +')');
           $(link).next().css('font-weight', 'bold');
-          $.localStorage.setItem(id, [wynik, nullCount]);
+          localStorage[id] = JSON.stringify([wynik, nullCount]);
         }
         
       });

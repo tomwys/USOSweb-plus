@@ -1,7 +1,7 @@
 {
 "content_scripts": [
   {
-  "js": [ "jquery.min.js", "base.js", "localstorage.js", "mimuw.js" ],
+  "js": [ "jquery.min.js", "base.js", "mimuw.js" ],
   "matches": [ "https://usosweb.mimuw.edu.pl/*" ]
   },
   {
