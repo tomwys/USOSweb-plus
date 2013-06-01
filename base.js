@@ -1,3 +1,4 @@
+$(function(){
 function enableStudentPhotos() {
   var rows = $('table.wrnav tr td a.wrgrey');
   var personRegexp = new RegExp("pokazOsobe\\(os_id:([0-9]*)\\)");
@@ -24,3 +25,4 @@ function enableStudentPhotos() {
 }
 
 enableStudentPhotos();
+});
